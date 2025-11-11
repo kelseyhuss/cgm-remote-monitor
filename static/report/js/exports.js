@@ -48,3 +48,21 @@ $('#rp_exportTreatments').click(function() {
   var to = $('#rp_to').val();
   authenticatedExport('/api/v1/treatments.csv?count=100000', 'created_at', from, to);
 });
+
+$('#rp_exportProfile').click(function() {
+  var from = $('#rp_from').val();
+  var to = $('#rp_to').val();
+  authenticatedExport('/api/v1/profile.csv?count=100000', 'created_at', from, to);
+});
+
+$('#rp_exportDeviceStatus').click(function() {
+  var from = $('#rp_from').val();
+  var to = $('#rp_to').val();
+  authenticatedExport('/api/v1/devicestatus.csv?count=100000', 'created_at', from, to);
+});
+
+$('#rp_exportFood').click(function() {
+  var from = $('#rp_from').val();
+  var to = $('#rp_to').val();
+  authenticatedExport('/api/v1/food.csv?count=100000', 'created_at', from, to);
+});
